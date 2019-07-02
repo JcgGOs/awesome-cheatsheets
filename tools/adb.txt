@@ -53,6 +53,22 @@ shell wm size             # 查看屏幕分辨率
 shell wm density          # 查看屏幕密度
 
 ##############################################################################
+# adb shell am broadcast
+##############################################################################
+adb shell am broadcast
+    [-a <ACTION>]
+    [-d <DATA_URI>]
+    [-t <MIME_TYPE>] 
+    [-c <CATEGORY> [-c <CATEGORY>] ...] 
+    [-e|--es <EXTRA_KEY> <EXTRA_STRING_VALUE> ...] 
+    [--ez <EXTRA_KEY> <EXTRA_BOOLEAN_VALUE> ...] 
+    [-e|--ei <EXTRA_KEY> <EXTRA_INT_VALUE> ...] 
+    [-n <COMPONENT>]
+    [-f <FLAGS>] [<URI>]
+    
+e.g adb shell am broadcast -a com.android.test --es test_string "this is test string" --ei test_int 100 --ez test_boolean true    
+
+##############################################################################
 # References
 ##############################################################################
 https://developer.android.google.cn/studio/command-line/adb.html
